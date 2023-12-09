@@ -1,36 +1,26 @@
-## AVR Drivers
+# Traffic Light Controller System
 
 This repository contains drivers for AVR microcontrollers. The drivers are written in C and are intended to be used with the AVR-GCC compiler.
 
-### Usage
+## Hardware Requirements
 
-To use the drivers, simply copy the files you need into your project directory and include them in your source code. 
-- ADD directory to the include path of your project.
-- Include the header file of the driver you want to use in your source code. 
-- Add the source file of the driver you want to use to your project.
+- ATmega32 microcontroller.
+- One push button connected to INT0 pin for pedestrian.
+- Three LEDs for cars (Green, Yellow, and Red), connected on port D, pins 5, 6, and 7.
+- Three LEDs for pedestrians (Green, Yellow, and Red), connected on port B, pins 5, 6, and 7.
 
+## Software Requirements
 
-### Features
+### In Normal Mode
 
-The following drivers are currently available:
+1. Cars' LEDs will change every five seconds starting from Green, then Yellow, then Red, then Yellow, then Green.
+2. The Yellow LED will blink for five seconds before moving to Green or Red LEDs.
 
-MCAL (MICROCONTROLLER ABSTRACTION LAYER):
-- GPIO
-- ADC
-- External Interrupts
-
-HAL (HARDWARE ABSTRACTION LAYER):
-- LCD 
-- Keypad
-- LED
-- 7-Segment Display
-- LM35 Temperature Sensor
-- switch
-
-
-### future work
-- Timers
-- UART
-- SPI
-- I2C
+### In Pedestrian Mode
+1. Change from normal mode to pedestrian mode when the pedestrian button is pressed.
+2. If pressed when the cars' Red LED is on, the pedestrian's Green LED and the cars' Red LEDs will be on for five seconds. Pedestrians can cross the street while the pedestrian's Green LED is on.
+3. If pressed when the cars' Green LED is on or the cars' Yellow LED is blinking, the pedestrian Red LED will be on. Then both Yellow LEDs start to blink for five seconds. Afterward, the cars' Red LED and pedestrian Green LEDs are on for five seconds. Pedestrians must wait until the Green LED is on.
+4. At the end of the two states, the cars' Red LED will be off, and both Yellow LEDs start blinking for 5 seconds. The pedestrian's Green LED is still on.
+5. After the five seconds, the pedestrian Green LED will be off, and both the pedestrian Red LED and the cars' Green LED will be on.
+6. Traffic light signals return to normal mode.
 
