@@ -24,3 +24,6 @@ This repository contains drivers for AVR microcontrollers. The drivers are writt
 5. After the five seconds, the pedestrian Green LED will be off, and both the pedestrian Red LED and the cars' Green LED will be on.
 6. Traffic light signals return to normal mode.
 
+
+https://github.com/MostafaHendy3/TrafficLight-AVR/assets/88643633/ad23fc88-6f3a-4163-93d0-0c8377815a94
+
