@@ -1,0 +1,25 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "cppbuild",
+			"label": "C/C++: avr-gcc.exe build active file",
+			"command": "C:\\avr8-gnu-toolchain-3.7.0.1796-win32.any.x86_64\\avr8-gnu-toolchain-win32_x86_64\\bin\\avr-gcc.exe",
+			"args": [
+				"-fdiagnostics-color=always",
+				"-g",
+				"${file}",
+				"-o",
+				"${fileDirname}\\${fileBasenameNoExtension}.hex"
+			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": "build",
+			"detail": "compiler: C:\\avr8-gnu-toolchain-3.7.0.1796-win32.any.x86_64\\avr8-gnu-toolchain-win32_x86_64\\bin\\avr-gcc.exe"
+		}
+	]
+}

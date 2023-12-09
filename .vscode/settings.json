@@ -1,0 +1,58 @@
+{
+    "files.associations": {
+        "dio_int.h": "c",
+        "errorstates.h": "c",
+        "dio_priv.h": "c",
+        "dio_config.h": "c",
+        "delay.h": "c",
+        "switch_config.h": "c",
+        "switch_priv.h": "c",
+        "stdtypes.h": "c",
+        "switch_int.h": "c",
+        "led_priv.h": "c",
+        "led_config.h": "c",
+        "led_int.h": "c",
+        "seven_segement_config.h": "c",
+        "ss_lt_config.h": "c",
+        "ss_lt_priv.h": "c",
+        "lcd_config.h": "c",
+        "lcd_int.h": "c",
+        "keypad_int.h": "c",
+        "keypad_config.h": "c",
+        "exti_priv.h": "c",
+        "exti_config.h": "c",
+        "gie_priv.h": "c",
+        "gie_config.h": "c",
+        "interrupt.h": "c",
+        "exti_int.h": "c",
+        "ht66f489.h": "c",
+        "adc_config.h": "c",
+        "adc_priv.h": "c",
+        "adc_int.h": "c",
+        "intterupt.h": "c",
+        "lcd_priv.h": "c",
+        "gie_int.h": "c",
+        "lm35_priv.h": "c",
+        "timer_config.h": "c",
+        "wdt_int.h": "c",
+        "app_priv.h": "c"
+    },
+    "MicroPython.executeButton": [
+        {
+            "text": "▶",
+            "tooltip": "Run",
+            "alignment": "left",
+            "command": "extension.executeFile",
+            "priority": 3.5
+        }
+    ],
+    "MicroPython.syncButton": [
+        {
+            "text": "$(sync)",
+            "tooltip": "sync",
+            "alignment": "left",
+            "command": "extension.execute",
+            "priority": 4
+        }
+    ]
+}
